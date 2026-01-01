@@ -16,3 +16,21 @@ git add .
 git commit -m "the pod.yaml and the md file" 
 git push -u origin pod-yaml
 git checkout -b service-yaml
+git add . 
+git commit -m "the service.yaml and the md file" 
+git push -u origin service-yaml
+git checkout -b csreenshot
+git add . 
+git commit -m "the screenshot and the md file" 
+git push -u origin sreenshot
+
+
+docker build -t streamlit .
+docker run -d --name streamlitTest streamlit:latest
+streamlit run your_app.py --server.port 8080 --server.address=0.0.0.0
+kubectl apply -f service.yaml
+kubectl apply -f pod.yaml
+docker tag streamlit:latest davidlevko2025/streamlit:latest
+docker push davidlevko2025/streamlit:latest
+kubectl get services
+kubectl get pods
