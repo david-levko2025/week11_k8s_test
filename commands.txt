@@ -12,3 +12,7 @@ git add .
 git commit -m "Dockerfile finish and .md" 
 git push -u origin dockerfile 
 git checkout -b pod-yaml  
+git add . 
+git commit -m "the pod.yaml and the md file" 
+git push -u origin pod-yaml
+git checkout -b service-yaml
