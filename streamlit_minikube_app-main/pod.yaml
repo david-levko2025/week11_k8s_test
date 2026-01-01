@@ -9,4 +9,4 @@ spec:
     - name: streamlit
       image: streamlit-app:latest
       ports:
-        - containerPort: 8501
+        - containerPort: 8080
