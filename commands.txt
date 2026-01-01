@@ -16,3 +16,6 @@ git add .
 git commit -m "the pod.yaml and the md file" 
 git push -u origin pod-yaml
 git checkout -b service-yaml
+git add . 
+git commit -m "the service.yaml and the md file" 
+git push -u origin service-yaml
